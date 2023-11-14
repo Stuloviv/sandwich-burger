@@ -59,6 +59,11 @@
   max-width: 700px;
   margin: 0 auto;
 
+  @include vp-1549 {
+    column-gap: 25px;
+    font-size: 16px;
+  }
+
   @include vp-1023 {
     flex-direction: column;
     row-gap: 0;
