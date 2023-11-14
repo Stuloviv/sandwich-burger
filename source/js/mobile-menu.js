@@ -1,40 +1,20 @@
-// import {ScrollLock} from './utils/scroll-lock';
-
-// const headerNavElement = document.querySelector('.header__navigation');
+import {disablePageScroll, enablePageScroll} from './utils/scroll-lock';
 
 const headerContainerElement = document.querySelector('.header__container');
 const headerToggleElement = document.querySelector('.header__navigation-toggle');
-// const linkElements = document.querySelectorAll('.header__navigation-link');
-
-
-// window.scrollLock = new ScrollLock();
-
-// const closeMenu = function () {
-//   headerElement.classList.add('is-close');
-//   headerElement.classList.remove('is-open');
-//   window.scrollLock.enableScrolling();
-// };
-
-// const closeOnOutBoundaries = function () {
-//   document.addEventListener('click', (evt) => {
-//     const withinBoundaries = evt.composedPath().includes(headerNavElement);
-//     if (!withinBoundaries) {
-//       closeMenu();
-//     }
-//   });
-// };
 
 headerToggleElement.addEventListener('click', () => {
   if (headerContainerElement.classList.contains('is-close')) {
-    headerContainerElement.classList.toggle('is-open');
-    headerToggleElement.classList.toggle('is-open');
-    // window.scrollLock.disableScrolling();
-    // if (headerElement.classList.contains('is-open')) {
-    //   linkElements.forEach((link) => {
-    //     link.addEventListener('click', closeMenu);
-    //   });
-    //   closeOnOutBoundaries();
+    headerContainerElement.classList.remove('is-close');
+    headerToggleElement.classList.remove('is-close');
+    headerContainerElement.classList.add('is-open');
+    headerToggleElement.classList.add('is-open');
+    disablePageScroll(window);
+  } else {
+    headerContainerElement.classList.remove('is-open');
+    headerToggleElement.classList.remove('is-open');
+    headerContainerElement.classList.add('is-close');
+    headerToggleElement.classList.add('is-close');
+    enablePageScroll(window);
   }
 });
-
-
