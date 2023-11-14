@@ -1,0 +1,62 @@
+mixin header(currentUrl)
+  -
+    const headerLinks = [
+      {
+        href: "#",
+        text: "Сэндвич-панели"
+      },
+      {
+        href: "#",
+        text: "Объекты"
+      },
+      {
+        href: "#",
+        text: "Сертификаты"
+      },
+      {
+        href: "#",
+        text: "О компании"
+      },
+      {
+        href: "#",
+        text: "Полезное"
+      },
+      {
+        href: "#",
+        text: "Контакты"
+      },
+    ]
+
+  header.header
+    div.header__navigation-toggle-wrapper
+      button.is-close.header__navigation-toggle(type="button" aria-label="Открыть меню")
+        span
+        span
+        span
+    div.header__container.container.is-close
+      div.header__wrapper
+        div.header__logo
+          if(currentUrl === "index.html")
+            img(src="img/logo/logo_text_slogan.png" width="300" alt="Логотип SandwichBurger")
+          else
+            a.header__logo-link(href="index.html", aria-label="Переход на главную")
+              img(src="img/logo/logo_text_slogan.png" width="300" alt="Логотип SandwichBurger")
+        nav.header__navigation
+          ul.header__navigation-list.list-null
+            each link in headerLinks
+                - const activeState = currentUrl === link.href
+                li.header__navigation-item
+                  if(activeState)
+                    span.header__navigation-link.is-active= link.text
+                  else
+                    a.header__navigation-link(href=link.href)= link.text
+        div.header__right-block
+          div.header__contacts
+            div.header__link-container
+              h3.visually-hidden Телефон
+              a.header__phone-link(href="tel:+78005555555") 8 800 555 55 55
+            div.header__link-container
+              h3.visually-hidden Email
+              a.header__email-link(href="mailto:sandwich@burger.ru") sandwich@burger.ru
+          button.header__order-button(type="submit") Заказать звонок
+

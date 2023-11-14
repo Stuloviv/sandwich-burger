@@ -1,0 +1,21 @@
+.container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  @media (max-width: $vp-1280) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  // @include vp-1023 {
+  //   padding: 0 24px;
+  // }
+
+  @media (max-width: $vp-768) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

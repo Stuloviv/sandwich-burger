@@ -1,0 +1,171 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  color: $color-default-white;
+
+  background-color: $color-theme-grey;
+}
+
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 30px;
+
+  @include vp-1023 {
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+
+.footer__logo {
+  margin-right: 20px;
+
+  @include vp-1023 {
+    margin-right: 0;
+  }
+}
+
+.footer__top-wrapper {
+  display: flex;
+  align-items: center;
+
+  @include vp-1023 {
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+
+.footer__contacts-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+
+  margin-right: 35px;
+
+  @include vp-1023 {
+    flex-direction: row;
+    gap: 30px;
+
+    margin-right: 0;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+}
+
+.footer__contacts-first {
+  @include vp-1023 {
+    text-align: center;
+  }
+}
+
+.footer__link-container {
+  font-size: 16px;
+
+  cursor: pointer;
+
+  transition: 0.5s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.footer__phone-link {
+  font-size: 23px;
+  color: $color-default-white;
+  text-decoration: none;
+}
+
+.footer__email-link {
+  color: $color-default-white;
+  text-decoration: none;
+}
+
+.footer__address {
+  margin: 0;
+
+  @include vp-1023 {
+    text-align: center;
+  }
+}
+
+.footer__order-button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  background-color: $color-default-white;
+
+  font-size: 14px;
+  font-weight: 700;
+  color: $color-theme-accent;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  &:hover {
+    background-color: $color-theme-accent;
+
+    color: $color-default-white;
+  }
+}
+
+.footer__bottom {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__privacy-policy {
+  margin-bottom: 15px;
+
+  font-size: 14px;
+
+  text-decoration: none;
+  color: $color-default-white;
+
+  cursor: pointer;
+
+  transition: 0.5s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  @include vp-767 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.footer__copyright-text {
+  max-width: 1060px;
+  margin: 0 auto;
+
+  font-size: 16px;
+  text-align: center;
+
+  @include vp-1023 {
+    font-size: 14px;
+  }
+
+  @include vp-767 {
+    font-size: 12px;
+  }
+}
