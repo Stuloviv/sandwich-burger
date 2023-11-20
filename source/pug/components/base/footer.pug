@@ -20,18 +20,18 @@ mixin footer(currentUrl)
                   h3.visually-hidden Email
                   a.footer__email-link(href="mailto:sandwich@burger.ru") sandwich@burger.ru
               div.footer__contacts-second
-                div.footer__link-container
-                  h3.visually-hidden Адрес
-                  p.footer__address
-                    |г. Самара, Московское шоссе,
-                    |<br>
-                    |д. 4, кор. 4, 4 этаж, оф. 421
-                    |<br>
-                    |БЦ "Monte Rosa"
+                h3.visually-hidden Адрес
+                p.footer__address
+                  |г. Самара, Московское шоссе,
+                  |<br>
+                  |д. 4, кор. 4, 4 этаж, оф. 421
+                  |<br>
+                  |БЦ "Monte Rosa"
           button.footer__order-button(type="button") Заказать расчёт
     div.footer__container.container.footer__bottom
-      a.footer__privacy-policy(href="confidential-policy.html", aria-label="Политика конфиденциальности")
-        span Политика конфиденциальности
+      if(currentUrl !== "confidential-policy.html")
+        a.footer__privacy-policy(href="confidential-policy.html", aria-label="Политика конфиденциальности")
+          span Политика конфиденциальности
       div.footer__copyright
         h3.visually-hidden Копирайт
         div.footer__copyright-text
