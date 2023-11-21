@@ -6,7 +6,7 @@ const copyImages = () => gulp.src('source/img/**/*.{png,jpg,jpeg,webp,avif}', {b
 
 const copy = () =>
   gulp
-      .src(['source/**.html', 'source/fonts/**', 'source/img/**', 'source/**.webmanifest', 'source/**.ico', 'source/data/**'], {
+      .src(['source/**.html', 'source/fonts/**', 'source/img/**', 'source/video/**', 'source/**.webmanifest', 'source/**.ico', 'source/data/**'], {
         base: 'source',
       })
       .pipe(gulp.dest('build'));

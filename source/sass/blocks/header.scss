@@ -52,7 +52,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  column-gap: 30px;
+  column-gap: 25px;
   row-gap: 5px;
   flex-wrap: wrap;
 
@@ -61,6 +61,10 @@
 
   @include vp-1549 {
     column-gap: 20px;
+    font-size: 16px;
+  }
+
+  @include vp-1439 {
     font-size: 14px;
   }
 
@@ -72,6 +76,8 @@
     flex-direction: column;
     row-gap: 0;
     max-width: 100%;
+
+    font-size: 20px;
   }
 }
 
@@ -81,13 +87,14 @@
     align-items: center;
 
     width: 100%;
-    padding: 10px;
+    padding: 15px;
 
     text-align: center;
   }
 }
 
 .header__navigation-link {
+  font-weight: 700;
   color: $color-default-black;
 
   &:hover {
@@ -175,7 +182,7 @@
 
     padding: 20px;
 
-    background-color: $color-theme-grey;
+    background-color: $color-default-white;
   }
 }
 
@@ -201,7 +208,7 @@
       width: 100%;
       height: 3px;
 
-      background-color: $color-default-white;
+      background-color: $color-default-black;
 
       &:first-child {
         top: 0;
