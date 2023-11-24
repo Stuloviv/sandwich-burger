@@ -29,6 +29,12 @@ mixin header(currentUrl)
 
   header.header
     div.header__navigation-toggle-wrapper
+      div.header__logo-mobile
+          if(currentUrl === "index.html")
+            img(src="img/logo/logo_text_slogan.png" width="100" alt="Логотип SandwichBurger")
+          else
+            a.header__logo-mobile-link(href="index.html", aria-label="Переход на главную")
+              img(src="img/logo/logo_text_slogan.png" width="100" alt="Логотип SandwichBurger")
       button.is-close.header__navigation-toggle(type="button" aria-label="Открыть меню")
         span
         span
