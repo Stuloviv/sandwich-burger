@@ -1,5 +1,7 @@
 .index-main {
   position: relative;
+
+  margin-bottom: 50px;
 }
 
 .index-main__video-wrapper {
@@ -64,26 +66,15 @@
   top: 0;
   left: 50%;
 
-  width: 900px;
   margin: 0 auto;
-  padding: 0;
 
   transform: translateX(-50%);
 
-  @include vp-1549 {
-    width: 800px;
-  }
-
-  @include vp-1279 {
-    width: 680px;
-  }
-
   @include vp-1023 {
-    width: 640px;
+    // width: 640px;
   }
 
   @include vp-767 {
-    width: 100%;
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -100,12 +91,12 @@
   }
 
   @include vp-1279 {
-    width: 520px;
+    width: 620px;
     padding-top: 60px;
   }
 
   @include vp-1023 {
-    width: 100%;
+    margin: 0 auto;
     padding-top: 30px;
   }
 
@@ -115,6 +106,7 @@
     align-items: center;
     justify-content: center;
 
+    width: 100%;
     height: 500px;
     padding-top: 20px;
   }

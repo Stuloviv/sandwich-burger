@@ -12,6 +12,7 @@
 }
 
 .header__container {
+  max-width: 1920px;
   @include vp-1023 {
     display: none;
   }

@@ -1,6 +1,7 @@
 extends ../components/base/layout
 
 include ../components/blocks/index-main
+include ../components/blocks/promo
 
 block variables
   - const title = "SandwichBurger" //- на страницах кроме главной используйте О нас — ProjectName
@@ -11,5 +12,4 @@ block variables
 block main
   main
     +index-main()
-    div
-      p Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quibusdam ex numquam hic voluptatem quidem quisquam iure! Maiores illum quasi ullam sint tenetur commodi. Necessitatibus velit inventore tempora nemo quae.
+    +promo()
