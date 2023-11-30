@@ -33,7 +33,7 @@
   border-radius: 20px;
 
   background-color: $color-theme-grey;
-  background-image: url("../img/pages/promo/promo_5.svg");
+  background-image: url("../img/pages/index/promo/promo_5.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right bottom;
@@ -47,13 +47,13 @@
     width: 300px;
     height: 150px;
 
-    background-image: url('../img/pages/promo/promo_1.png');
+    background-image: url('../img/pages/index/promo/promo_1.png');
     background-size: contain;
     background-repeat: no-repeat;
   }
 
   @include vp-1279 {
-    background-image: url('../img/pages/promo/promo_4.svg');
+    background-image: url('../img/pages/index/promo/promo_4.svg');
     background-size: auto;
     background-position: right bottom;
   }
@@ -175,12 +175,12 @@
   }
 
   &--first::before {
-    background-image: url('../img/pages/promo/promo_2.png');
+    background-image: url('../img/pages/index/promo/promo_2.png');
     transform: translate(-110%, 10%) rotate(40deg);
   }
 
   &--second::before {
-    background-image: url('../img/pages/promo/promo_3.png');
+    background-image: url('../img/pages/index/promo/promo_3.png');
     transform: translate(-100%, 20%) rotate(-40deg);
   }
 

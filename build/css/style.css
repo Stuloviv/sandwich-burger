@@ -323,6 +323,13 @@ template {
   src: url("../fonts/rouble.woff2") format("woff2");
 }
 @font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Rouble";
+  font-display: swap;
+  src: url("../fonts/rouble.woff") format("woff");
+}
+@font-face {
   font-family: "PTSans";
   font-weight: 700;
   font-style: normal;
@@ -478,6 +485,14 @@ button,
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+}
+
+.rouble {
+  font-family: "Rouble", "Arial", sans-serif;
+  /* stylelint-disable */
+  text-transform: lowercase !important;
+  font-weight: 400 !important;
+  /* stylelint-enable */
 }
 
 .visually-hidden {
@@ -1363,7 +1378,7 @@ button,
   padding: 40px;
   border-radius: 20px;
   background-color: #212121;
-  background-image: url("../img/pages/promo/promo_5.svg");
+  background-image: url("../img/pages/index/promo/promo_5.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right bottom;
@@ -1374,13 +1389,13 @@ button,
   content: "";
   width: 300px;
   height: 150px;
-  background-image: url("../img/pages/promo/promo_1.png");
+  background-image: url("../img/pages/index/promo/promo_1.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
 @media (max-width: 1279px) {
   .promo__big-block {
-    background-image: url("../img/pages/promo/promo_4.svg");
+    background-image: url("../img/pages/index/promo/promo_4.svg");
     background-size: auto;
     background-position: right bottom;
   }
@@ -1506,12 +1521,12 @@ button,
   background-repeat: no-repeat;
 }
 .promo__small-block--first::before {
-  background-image: url("../img/pages/promo/promo_2.png");
+  background-image: url("../img/pages/index/promo/promo_2.png");
   -webkit-transform: translate(-110%, 10%) rotate(40deg);
           transform: translate(-110%, 10%) rotate(40deg);
 }
 .promo__small-block--second::before {
-  background-image: url("../img/pages/promo/promo_3.png");
+  background-image: url("../img/pages/index/promo/promo_3.png");
   -webkit-transform: translate(-100%, 20%) rotate(-40deg);
           transform: translate(-100%, 20%) rotate(-40deg);
 }

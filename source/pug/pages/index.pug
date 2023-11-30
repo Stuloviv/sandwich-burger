@@ -2,6 +2,7 @@ extends ../components/base/layout
 
 include ../components/blocks/index-main
 include ../components/blocks/promo
+include ../components/blocks/prices
 
 block variables
   - const title = "SandwichBurger" //- на страницах кроме главной используйте О нас — ProjectName
@@ -13,3 +14,4 @@ block main
   main
     +index-main()
     +promo()
+    +prices()

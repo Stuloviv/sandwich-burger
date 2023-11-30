@@ -1,0 +1,53 @@
+mixin prices()
+  -
+    const pricesCards = [
+      {
+        image: "",
+        name: "Стеновые сэндвич-панели",
+        price: "1230",
+        feature: "Толщина от 30 мм до 300 мм"
+      },
+      {
+        image: "",
+        name: "Кровельные сэндвич-панели",
+        price: "1297",
+        feature: "Толщина от 30 мм до 300 мм"
+      },
+      {
+        image: "",
+        name: "Сэндвич-панели со спецпокрытием",
+        price: "1161",
+        feature: "Толщина от 30 мм до 300 мм"
+      },
+      {
+        image: "",
+        name: "Сэндвич-панели PRO CordPlus",
+        price: "1123",
+        feature: "С кабель-каналом"
+      },
+      {
+        image: "",
+        name: "Сэндвич-панели PRO EuroLight",
+        price: "1883",
+        feature: "С алюминиевым облицовками"
+      },
+      {
+        image: "",
+        name: "Сэндвич-панели PRO EvoSteel",
+        price: "2457",
+        feature: "С облицовками из нержавейки"
+      },
+    ]
+
+  section.prices
+    div.prices__container.container
+      h2.prices__title Стоимость сэндвич-панелей
+      div.prices__wrapper
+        ul.prices__list.list-null
+          each card in pricesCards
+            li.prices__cards
+              div.prices__card-image-wrapper
+                img.prices__card-image
+              h3.prices__card-title= card.name
+              span.prices__card-price От #[span= card.price]₽/м²
+              p.prices__card-text= card.feature
