@@ -46,8 +46,12 @@ mixin prices()
         ul.prices__list.list-null
           each card in pricesCards
             li.prices__cards
-              div.prices__card-image-wrapper
-                img.prices__card-image
-              h3.prices__card-title= card.name
-              span.prices__card-price От #[span= card.price]₽/м²
-              p.prices__card-text= card.feature
+              a.prices__link(href="#")
+                div.prices__card-image-wrapper
+                  picture
+                    source(srcset="./img/pages/index/prices/2023-11-30_13-29-53.jpg?as=webp&width=360", type="image/webp")
+                    img.prices__card-image(src="./img/pages/index/prices/2023-11-30_13-29-53.jpg?as=webp&width=360", type="image/webp" width="360")
+                h3.prices__card-title= card.name
+                span.prices__card-price От #[span= card.price]₽/м²
+                p.prices__card-text= card.feature
+                p.prices__button Скачать прайс-лист
